@@ -1,0 +1,21 @@
+﻿<ContentDialog
+    x:Class="Sales_Manager.Features.DeleteDialog.Presentation.Screen.DeleteSalesDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Sales_Manager.Features.DeleteDialog.Presentation.Screen"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Delete Sale"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    PrimaryButtonText="Cancel"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    SecondaryButtonText="Delete"
+    mc:Ignorable="d">
+
+    <Grid MaxWidth="300">
+
+        <TextBlock Text="Are you sure you want to delete this sales item? You can't undo this action." TextWrapping="Wrap" />
+
+    </Grid>
+
+</ContentDialog>

@@ -1,0 +1,30 @@
+﻿<ContentDialog
+    x:Class="Sales_Manager.Features.NotesDialogs.DeleteDialog.Presentation.Screen.EditNotesDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Edit Note"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    PrimaryButtonText="Cancel"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    SecondaryButtonText="Save"
+    mc:Ignorable="d">
+
+    <StackPanel Spacing="10">
+
+        <TextBox
+            Width="300"
+            MaxHeight="200"
+            Header="Note"
+            Text="{Binding NoteText, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+
+        <CalendarDatePicker
+            Width="300"
+            Date="{Binding NoteDate, Mode=TwoWay}"
+            Header="Date" />
+
+    </StackPanel>
+
+</ContentDialog>

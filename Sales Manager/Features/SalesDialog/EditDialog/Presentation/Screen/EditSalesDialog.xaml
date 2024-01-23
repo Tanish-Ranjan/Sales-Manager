@@ -1,0 +1,49 @@
+﻿<ContentDialog
+    x:Class="Sales_Manager.Features.EditDialog.Presentation.Screen.EditSalesDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Edit Sales Item"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    PrimaryButtonText="Cancel"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    SecondaryButtonText="Save"
+    mc:Ignorable="d">
+
+    <StackPanel Spacing="10">
+
+        <ComboBox
+            Width="300"
+            DisplayMemberPath="Name"
+            Header="Item Name"
+            IsEditable="True"
+            ItemsSource="{Binding ItemsList}"
+            SelectedValuePath="Data"
+            Text="{Binding Name, Mode=TwoWay}" />
+
+        <TextBox
+            Width="300"
+            Header="Rate"
+            Text="{Binding Rate, Mode=TwoWay}" />
+
+        <TextBox
+            Width="300"
+            Header="Quantity"
+            Text="{Binding Qty, Mode=TwoWay}" />
+
+        <TextBox
+            Width="300"
+            Header="Total"
+            IsReadOnly="True"
+            IsTabStop="False"
+            Text="{Binding Total, Mode=OneWay}" />
+
+        <CalendarDatePicker
+            Width="300"
+            Date="{Binding Date, Mode=TwoWay}"
+            Header="Date" />
+
+    </StackPanel>
+
+</ContentDialog>
